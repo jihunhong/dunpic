@@ -1,0 +1,54 @@
+.weapon_status{
+    
+}
+
+.card_effect{
+  font-weight:bold;
+}
+
+.cardname{
+  color : #e2a106;
+	font-weight : 560;
+}
+
+.card_header{
+    animation: fill 4s linear 1;
+    height: 100%;
+}
+
+@keyframes fill {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+.true{
+  background-color: aquamarine;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.false{
+  background-color: lightcoral;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.item_card p{
+  font-size: large;
+}
+
+.card_effect span{
+  padding: 5px;
+}
+
+.card_effect p{
+  padding: 5px;
+}
+
+.card_effect #reinforce_status{
+  font-size: large;
+}

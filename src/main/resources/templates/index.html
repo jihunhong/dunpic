@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184936-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121184936-1');
+</script>
+
+
+<meta property="og:title" content="DUNPIC 던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:description" content="던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:site_name" content="DUNPIC">
+<meta property="og:image" content="http://bbscdn.df.nexon.com/data6/commu/201901/173109_5c48264d24ea6.jpg">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/big.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="/MDB/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="/MDB/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="/MDB/css/style-0.0.4.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+  <style type="text/css">
+    /* Necessary for full page carousel*/
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
+    }
+
+    /* Carousel*/
+    .carousel,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100%;
+    }
+
+    .carousel-inner {
+      height: 100%;
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+      }
+    }
+  </style>
+  <style type="text/css">
+    /* Chart.js */
+    @-webkit-keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .chartjs-render-monitor {
+      -webkit-animation: chartjs-render-animation 0.001s;
+      animation: chartjs-render-animation 0.001s;
+    }
+  </style>
+
+</head>
+<body>
+<!-- Image and text -->
+	
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+    
+          <!-- Brand -->
+          <a class="navbar-brand" href="https://dunpic.net">
+            <strong>DUNPIC</strong>
+          </a>
+    
+          <!-- Collapse -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active_nav">
+                  <a class="nav-link waves-effect waves-light" href="/">HOME
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light" href="/contents">CONTENTS</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light" href="https://dunpic.net/board">COMMUNITY</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light" href="/tip">
+                    ENCHANT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light c_a" href="/tip/reinforce">
+                    REINFORCE
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+              </ul>
+    
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
+              <li class="nav-item">
+                <a href="https://www.facebook.com/dunpic" class="nav-link waves-effect waves-light" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="mailto:redgee49@gmail.com" class="nav-link waves-effect waves-light" target="_blank">
+                  <i class="far fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+    
+          </div>
+    
+        </div>
+      </nav>
+      <div class="view">
+
+        <!--Video source-->
+        <video class="video-intro" autoplay="true" muted="" id="video_bg">
+          <source src="/MDB/prey_video.mp4" type="video/mp4">
+        </video>
+
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+          <!-- Content -->
+          <div class="col-sm-10 col-lg-8 white-text mx-5 wow fadeIn" style="visibility: visible;animation-name: fadeIn;">
+
+
+            <!-- Search Bar -->
+            <div class="text-center col-sm-12 mb-4  d-md-block">
+                <form action="searching" method="get"> 
+            	
+                    <div class="search_bar">
+                            <select id="server" name="server" style="display:none;">
+                                    <option value="all">전체</option>
+                            </select>	                
+                        <div class="input-group stylish-input-group" style="    width: 100%;" >
+                            <input type="text" class="form-control" name="userName" id="input_bar" style="background-color:#d0c8c84f; color:white; margin-top: 120px;" autofocus>
+                        </div>
+                    </div>
+    
+                        <div class="search_option" style='color:white; display:none;'>
+                            <label><input type="radio" name="option" onclick="handleClick(this.id);" value="match" id="matching">MATCHING</label>
+                            <label><input type="radio" name="option" onclick="handleClick(this.id);" value="full"  checked="checked" id="full">FULL</label>
+                        </div>
+                    </form>  
+
+                    <p style="background-color: #b11b1b61;margin: 10px;border-radius: 5px;font-weight: 550;">타임라인 날짜 조정이 가능해졌습니다.</p>
+                    
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+      </div>
+
+      <footer class="page-footer text-center font-small wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+
+        <div class="row" style="    margin: 0px;
+        padding: 35px 280px 35px 280px;">
+
+            
+            <!-- 메인 페이지 컨텐츠 3개 표시 -->
+            <div class="col-lg-4" th:each="content : ${contents}">
+                <a href="/contents/" th:attrappend="href=${content.id}">
+                <!--Card-->
+                <div class="card wow fadeIn" data-wow-delay="0.2s" th:style="'background-image:url(' + ${content.header} + '); height:450px;'"  >
+
+                    <!--Card content-->
+                    <div class="card-body content-body">
+                        <!--Title-->
+                        <h4 class="card-title" th:text="${content.title}">This is title</h4>
+                        <!--Text-->
+                        <p class="card-text" th:text="${content.subtitle}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+                </div>
+                <!--/.Card-->
+                </a>
+            </div>
+        </div>
+  
+        <hr class="my-4">
+
+        <div class="pb-1">
+            <p class="msg">
+              <a href="http://developers.neople.co.kr" target="_blank">
+                <img src="../img/bi.png" alt="Neople 오픈 API">
+              </a>
+            </p>
+        </div>
+
+  
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2019 Copyright:
+            <a href="http://dunpic.net" target="_blank"> dunpic.net</a>
+          </div>
+        <!--/.Copyright-->
+  
+      </footer>
+
+      <script type="text/javascript" src="/MDB/js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/MDB/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/mdb.min.js"></script>
+    <div class="hiddendiv common"></div>
+    <!-- Initializations -->
+    <script type="text/javascript">
+      // Animations initialization
+      new WOW().init();
+    </script>
+
+</body>
+</html>

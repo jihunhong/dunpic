@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184936-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121184936-1');
+</script>
+
+<meta property="og:title" content="DUNPIC 던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:description" content="던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:site_name" content="DUNPIC">
+<meta property="og:image" content="http://bbscdn.df.nexon.com/data6/commu/201901/173109_5c48264d24ea6.jpg">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/big.png">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="/MDB/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="/MDB/css/mdb.min.css" rel="stylesheet">
+  
+  <!-- Your custom styles (optional) -->
+  <link href="/MDB/css/style-0.0.4.min.css" rel="stylesheet">
+  <link href="/css/enchant.css" rel="stylesheet">
+  <link href="/css/char_info.css" rel="stylesheet">
+  <link href="/css/itemcolor.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+  <meta property="og:title" content="DUNPIC 던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+  <meta property="og:description" content="던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+  <meta property="og:site_name" content="DUNPIC">
+  <meta property="og:image" content="http://bbscdn.df.nexon.com/data6/commu/201901/173109_5c48264d24ea6.jpg">
+  
+  <style type="text/css">
+    /* Necessary for full page carousel*/
+    html,
+    body,
+    .view {
+      height: 100%;
+    }
+
+    /* Carousel*/
+    .carousel,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100%;
+    }
+
+    .carousel-inner {
+      height: 100%;
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+      }
+    }
+
+    li p{
+        font-size: small;
+    }
+
+    .character_background{
+      background-image: url(https://image.freepik.com/free-vector/bright-background-with-dots_1055-3132.jpg); 
+      background-size: cover;
+    }
+
+    .card-title, .card-text{
+      color: black !important;
+    }
+  </style>
+  <style type="text/css">
+    /* Chart.js */
+    @-webkit-keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .chartjs-render-monitor {
+      -webkit-animation: chartjs-render-animation 0.001s;
+      animation: chartjs-render-animation 0.001s;
+    }
+  </style>
+  <style>
+    .true{
+      background-color: aquamarine;
+      border-radius: 4px;
+    }
+    .false{
+      background-color: lightcoral;
+      border-radius: 4px;
+    }
+  </style>
+
+  
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+</head>
+<body>
+<!-- Image and text -->
+    
+    <header>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+    
+          <!-- Brand -->
+          <a class="navbar-brand" href="/">
+            <strong>DUNPIC</strong>
+          </a>
+    
+          <!-- Collapse -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/">HOME
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/contents">CONTENTS</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="https://dunpic.net/board">COMMUNITY</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/tip">
+                  ENCHANT
+                  <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+    
+            <!-- Right SIDE( facebook, mail ) -->
+            <ul class="navbar-nav nav-flex-icons">
+              <li class="nav-item">
+                <a href="https://www.facebook.com/dunpic" class="nav-link waves-effect waves-light c_a" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="mailto:redgee49@gmail.com" class="nav-link waves-effect waves-light c_a" target="_blank">
+                  <i class="far fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+    
+          </div>
+    
+        </div>
+      </nav>
+    </header>
+
+      <main class="mt-5 pt-5" style="margin-bottom:180px;">
+
+          
+
+          
+        
+        <div class="container">
+            <p>검색범위는 최대 3개월로 한정됩니다!</p>
+            <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 80%;     margin: 10px 0px 10px 0px;     border-radius: 5px;">
+                <i class="fa fa-calendar"></i>&nbsp;
+                <span></span> <i class="fa fa-caret-down"></i>
+            </div>
+  
+            <script type="text/javascript" src="/js/timeline.js">
+            </script>
+            <section>
+
+                    <div class="row" id="panelPrecios">
+                        <div class="col-lg-3 
+                        col-md-3
+                        col-sm-12
+                        col-xs-12 info_default">
+                        <div class="circle" th:style="'background-image:url(https://img-api.neople.co.kr/df/servers/'  
+                                                       + @{${server}}  
+                                                      + '/characters/' 
+                                                      + @{${info.characterId}} 
+                                                      + '?zoom=2);'"></div>
+
+                        <div class="user_name" th:text="${info.characterName}" th:id="${info.characterId}">
+                            username
+                        </div>
+                        <div class="grown_name" th:text="${info.jobGrowName}">
+                            GrowName
+                        </div>
+                        <div class="guild_info" th:id="${server}">
+                            <p th:text="${info.guildName} != null ? '⛨' + ${info.guildName}"></p>
+                            <p th:text="'⚔️' + ${info.adventureName}"></p>
+                        </div>
+                        <div class="armor_blank">
+        
+                        </div>
+                        <div class="ac_blank">
+        
+                        </div>
+
+                    </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 tab_box">
+                        
+                          <button type="button" class="btn btn-primary" id="401">🔫 강화</button>
+                          <button type="button" class="btn btn-pink" id="402">🛠 증폭</button>
+                          <button type="button" class="btn btn-indigo" id="403">⛏ 재련</button>
+                          <button type="button" class="btn btn-amber" id="505">🌟 에픽</button>
+                              <!-- <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  🌀 레이드
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                  <a class="dropdown-item" href="#" id="207">핀드워</a>
+                                  <a class="dropdown-item" href="#" id="206">마수</a>
+                                </div>
+                              </div> -->
+
+                          
+
+                          <div class="TimeLineBoard">
+                              <table class="table table-hover" style="margin-bottom:0px;">
+                                  <tbody>
+                                  
+                                      
+                                        <tr th:each="timeline : ${timeline}">
+                                        <th scope="row" th:utext="${timeline.name} + '<br>' + '<p>' + ${timeline.date}+'</p>'"></th>      
+                                            <td>
+
+                                                <th:block th:if="${timeline.code} == 505">
+                                                <!-- 지옥파티 에픽획득  -->
+                                                  <img class="item_img" src='https://img-api.neople.co.kr/df/items/' th:attrappend="src=${timeline.data.itemId}"/>
+                                                  <span th:class="에픽" th:text="${timeline.data.itemName}"></span>
+                                                  <p th:text="${timeline.data.channelName} + ' ' +${timeline.data.channelNo} + '채널 ' + ${timeline.data.dungeonName}"></p>
+                                                </th:block>
+
+                                                <th:block th:if="${timeline.code} == 401">
+                                                <!-- 강화 -->
+                                                  <img class="item_img" src='https://img-api.neople.co.kr/df/items/' th:attrappend="src=${timeline.data.itemId}"/>
+                                                  <span th:class="에픽" th:text="${timeline.data.itemName}"></span>
+                                                  <p th:class="${timeline.data.result}">
+                                                    <span class="amp" th:text="'+' + ${timeline.data.after} + ' 강화'"></span>
+                                                    <th:block th:if="${timeline.data.result} == false">
+                                                      <span>실패</span>
+                                                    </th:block>
+                                                    <th:block th:unless="${timeline.data.result} == false">
+                                                      <span>성공</span>
+                                                    </th:block>
+                                                  </p>
+                                                </th:block>
+
+                                                <th:block th:if="${timeline.code} == 402">
+                                                <!-- 증폭 -->
+                                                  <img class="item_img" src='https://img-api.neople.co.kr/df/items/' th:attrappend="src=${timeline.data.itemId}"/>
+                                                  <span th:class="에픽" th:text="${timeline.data.itemName}"></span>
+                                                  <p th:class="${timeline.data.result}">
+                                                    <span class="amp" th:text="'+' + ${timeline.data.after} + ' 증폭'"></span>
+                                                    <th:block th:if="${timeline.data.result} == false">
+                                                      <span>실패</span>
+                                                    </th:block>
+                                                    <th:block th:unless="${timeline.data.result} == false">
+                                                      <span>성공</span>
+                                                    </th:block>
+                                                  </p>
+                                                </th:block>
+
+                                                <th:block th:if="${timeline.code} == 403">
+                                                <!-- 재련 -->
+                                                  <img class="item_img" src='https://img-api.neople.co.kr/df/items/' th:attrappend="src=${timeline.data.itemId}"/>
+                                                  <span th:class="에픽" th:text="${timeline.data.itemName}"></span>
+                                                  <p th:class="${timeline.data.result}">
+                                                    <span class="amp" th:text="'+' + ${timeline.data.after} + ' 재련'"></span>
+                                                    <th:block th:if="${timeline.data.result} == false">
+                                                      <span>실패</span>
+                                                    </th:block>
+                                                    <th:block th:unless="${timeline.data.result} == false">
+                                                      <span>성공</span>
+                                                    </th:block>
+                                                  </p>
+                                                </th:block>
+
+                                                <!-- <th:block th:if="${timeline.code} == 207">
+                                                  <div style="text-align: center;">
+                                                    <img src="http://bbscdn.df.nexon.com/data6/commu/201809/180329_5b9784e1d61dc.png" style="width: 70%;">
+                                                  </div>
+                                                </th:block> -->
+                                                
+                                            </td>
+                                          </tr>
+                                    </tbody>
+                                </table>
+
+                          </div>
+                            
+                        
+                      </div>
+                  </div>
+            </section>
+        </div>
+        
+        <p class="msg" style="    text-align: center;
+        padding: 45px;">
+          <a href="http://developers.neople.co.kr" target="_blank">
+            <img src="../img/bi.png" alt="Neople 오픈 API">
+          </a>
+        </p>
+    </main>
+    
+
+      <footer class="page-footer text-center font-small wow fadeIn" style="visibility: visible; animation-name: fadeIn; position: fixed; width: 100%;">
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2019 Copyright:
+            <a href="http://dunpic.net" target="_blank"> dunpic.net</a>
+          </div>
+        <!--/.Copyright-->
+  
+      </footer>
+
+      
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/MDB/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/mdb.min.js"></script>
+    <div class="hiddendiv common"></div>
+    <!-- Initializations -->
+    <script type="text/javascript">
+      // Animations initialization
+      new WOW().init();
+    </script>
+
+    <script>
+      $(function(){
+          $("div button").click(function(){
+              var txt = $(this).attr("id");
+              
+              LoadTimelineOnCode(txt);
+          });
+      });
+
+    </script>
+
+
+    <script>
+
+      function LoadTimelineOnCode(code){
+
+        var server = document.getElementsByClassName("guild_info")[0].id;
+        var characterId = document.getElementsByClassName("user_name")[0].id;
+        var start = $('#reportrange').data('daterangepicker').startDate.format('YYYY-MM-DD hh:mm');
+        
+        var end   = $('#reportrange').data('daterangepicker').endDate.format('YYYY-MM-DD hh:mm');
+        var current = new Date();
+
+        if(end > current){
+          end = current;
+          console.log(end+"||"+current);
+        }else if(end < current){
+          console.log("current is big");
+        }
+          
+
+
+        var tag   = "";
+
+        if(code == 401){
+          tag = "강화";
+        }else if(code == 402){
+          tag = "증폭";
+        }else if(code == 403){
+          tag = "재련";
+        }else if(code == null){
+          tag  = "";
+          code = "";
+        }
+
+    
+
+        $.ajax({
+            url: "/timelineload?server=" + encodeURIComponent(server) + "&characterId=" + encodeURIComponent(characterId) + "&code=" + encodeURIComponent(code) + "&start=" + encodeURIComponent(start) + "&end=" + encodeURIComponent(end),
+            type: 'GET',
+            cache : false,
+            dataType : "json",
+            success:function(result, textStatus, xhr, response){
+              console.log(result);
+              
+              $("tbody").remove();
+
+              document.getElementsByClassName('table')[0].innerHTML += "<tbody></tbody>"
+
+              for(i=0; i < result.length; i++){
+
+                var status = "";
+
+                if(result[i].data.result == false){
+                  status = "실패";
+                }else if(result[i].data.result == true){
+                  status = "성공";
+                }
+
+
+                var after = result[i].data.channelName + ' ' + result[i].data.channelNo + '채널 ' + result[i].data.dungeonName ;
+                // <p th:text="${timeline.data.channelName} + ' ' +${timeline.data.channelNo} + '채널 ' + ${timeline.data.dungeonName}"></p>
+
+                if(result[i].data.after != null){
+                  after = "+" + result[i].data.after + tag;
+                }
+                
+                document.getElementsByTagName('tbody')[0].innerHTML +=
+                      "<tr>"
+                      + "<th scope='row'>" + result[i].name + "<br>" + "<p>" + result[i].date + "</p> </th>"
+                      + "<td>"
+                      +   "<img class='item_img' src='https://img-api.neople.co.kr/df/items/" + result[i].data.itemId + "'>"
+                      +   "<span class='에픽'>" + result[i].data.itemName + "</span>"
+                      +   "<p class='" + result[i].data.result + "'>"
+                      +      "<span>"     + after + "</span>"
+                      +      "<span>"     + status + "</span>"
+                      +   "</p>"                              
+                      + "</td>"
+                      +"</tr>";
+                
+              }
+              
+              
+            }
+          });
+
+      }
+      
+
+    </script>
+    
+
+ 
+</body>
+</html>

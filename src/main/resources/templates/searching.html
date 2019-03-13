@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184936-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121184936-1');
+</script>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/big.png">
+
+<meta property="og:title" content="DUNPIC 던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:description" content="던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:site_name" content="DUNPIC">
+<meta property="og:image" content="http://bbscdn.df.nexon.com/data6/commu/201901/173109_5c48264d24ea6.jpg">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+>
+  <!-- Enchant menu CustomCSS -->
+  <link href="/css/enchant.css" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="/MDB/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="/MDB/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="/MDB/css/style-0.0.4.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+  <meta property="og:title" content="DUNPIC 던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+  <meta property="og:description" content="던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+  <meta property="og:site_name" content="DUNPIC">
+  <meta property="og:image" content="http://bbscdn.df.nexon.com/data6/commu/201901/173109_5c48264d24ea6.jpg">
+
+  <style type="text/css">
+    /* Necessary for full page carousel*/
+    html,
+    body,
+    .view {
+      height: 100%;
+    }
+
+    /* Carousel*/
+    .carousel,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100%;
+    }
+
+    .carousel-inner {
+      height: 100%;
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+      }
+    }
+
+    li p{
+        font-size: small;
+    }
+
+    .character_background{
+      background-image: url(https://image.freepik.com/free-vector/bright-background-with-dots_1055-3132.jpg); 
+      background-size: cover;
+    }
+
+    .card-title, .card-text{
+      color: black !important;
+    }
+  </style>
+  <style type="text/css">
+    /* Chart.js */
+    @-webkit-keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .chartjs-render-monitor {
+      -webkit-animation: chartjs-render-animation 0.001s;
+      animation: chartjs-render-animation 0.001s;
+    }
+  </style>
+
+</head>
+<body>
+<!-- Image and text -->
+    
+    <header>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+    
+          <!-- Brand -->
+          <a class="navbar-brand" href="/">
+            <strong>DUNPIC</strong>
+          </a>
+    
+          <!-- Collapse -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/">HOME
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/contents">CONTENTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/tip">
+                  ENCHANT
+                  <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/tip/reinforce">
+                  REINFORCE
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+            </ul>
+    
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
+              <li class="nav-item">
+                <a href="https://www.facebook.com/dunpic" class="nav-link waves-effect waves-light c_a" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="mailto:redgee49@gmail.com" class="nav-link waves-effect waves-light c_a" target="_blank">
+                  <i class="far fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+    
+          </div>
+    
+        </div>
+      </nav>
+    </header>
+
+      <main class="mt-5 pt-5">
+
+        
+        <div class="container">
+         <section>
+
+          <!-- 출력할 서버 선택 -->
+          <select class="browser-default mb-4 custom-select" id="server_selector">
+            <option selected>전체</option>
+            <option value="1">카인</option>
+            <option value="2">디레지에</option>
+            <option value="3">시로코</option>
+            <option value="4">카시야스</option>
+            <option value="5">프레이</option>
+            <option value="6">안톤</option>
+          </select>
+
+          <div class="row mb-4 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+
+            <!--카인 -->
+            <div class="col-lg-4 col-md-6 mb-4 카인" th:each="cain : ${cain}">
+  
+              <!--Card-->
+              <div class="card">
+                <a href="/info/character?server=cain&characterId=" th:attrappend="href=${cain.characterId}">
+                <!--Card image-->
+                <div class="view overlay character_background">
+                  <img src="https://img-api.neople.co.kr/df/servers/cain/characters/" th:attrappend="src=${cain.characterId}" class="card-img-top" alt="">
+                  
+                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                </div>
+  
+                <!--Card content-->
+                <div class="card-body">
+                  <!--Title-->
+                  <h4 class="card-title" th:text="${cain.characterName}">이름</h4>
+                  <!--Text-->
+                  <p class="card-text" th:text="${cain.jobGrowName}">전직</p>
+                </div>
+              </div>
+              </a>
+            </div>
+
+
+            <!-- 디레지에 -->
+            <div class="col-lg-4 col-md-6 mb-4 디레지에" th:each="diregie : ${diregie}">
+  
+              <!--Card-->
+              <div class="card">
+                <a href="/info/character?server=diregie&characterId=" th:attrappend="href=${diregie.characterId}">
+                <!--Card image-->
+                <div class="view overlay character_background">
+                  <img src="https://img-api.neople.co.kr/df/servers/diregie/characters/" th:attrappend="src=${diregie.characterId}" class="card-img-top" alt="">
+                  
+                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                  
+                </div>
+  
+                <!--Card content-->
+                <div class="card-body">
+                  <!--Title-->
+                  <h4 class="card-title" th:text="${diregie.characterName}">이름</h4>
+                  <!--Text-->
+                  <p class="card-text" th:text="${diregie.jobGrowName}">전직</p>
+                </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- 시로코 -->
+            <div class="col-lg-4 col-md-6 mb-4 시로코" th:each="siroco : ${siroco}">
+  
+              <!--Card-->
+              <div class="card">
+
+                <a href="/info/character?server=siroco&characterId=" th:attrappend="href=${siroco.characterId}">
+                <!--Card image-->
+                <div class="view overlay character_background">
+                  <img src="https://img-api.neople.co.kr/df/servers/siroco/characters/" th:attrappend="src=${siroco.characterId}" class="card-img-top" alt="">
+                  
+                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                  
+                </div>
+  
+                <!--Card content-->
+                <div class="card-body">
+                  <!--Title-->
+                  <h4 class="card-title" th:text="${siroco.characterName}">이름</h4>
+                  <!--Text-->
+                  <p class="card-text" th:text="${siroco.jobGrowName}">전직</p>
+                </div>
+                </a>
+              </div>
+            </div>
+            
+
+            <!-- 카시야스 -->
+            <div class="col-lg-4 col-md-6 mb-4 카시야스" th:each="casillas : ${casillas}">
+  
+              <!--Card-->
+              <div class="card">
+
+                <a href="/info/character?server=casillas&characterId=" th:attrappend="href=${casillas.characterId}">
+                <!--Card image-->
+                <div class="view overlay character_background">
+                  <img src="https://img-api.neople.co.kr/df/servers/casillas/characters/" th:attrappend="src=${casillas.characterId}" class="card-img-top" alt="">
+                  
+                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                  
+                </div>
+  
+                <!--Card content-->
+                <div class="card-body">
+                  <!--Title-->
+                  <h4 class="card-title" th:text="${casillas.characterName}">이름</h4>
+                  <!--Text-->
+                  <p class="card-text" th:text="${casillas.jobGrowName}">전직</p>
+                </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- 프레이 -->
+            <div class="col-lg-4 col-md-6 mb-4 프레이" th:each="prey : ${prey}">
+  
+              <!--Card-->
+              <div class="card">
+                <a href="/info/character?server=prey&characterId=" th:attrappend="href=${prey.characterId}">
+
+                <!--Card image-->
+                <div class="view overlay character_background">
+                  <img src="https://img-api.neople.co.kr/df/servers/prey/characters/" th:attrappend="src=${prey.characterId}" class="card-img-top" alt="">
+                  
+                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                  
+                </div>
+  
+                <!--Card content-->
+                <div class="card-body">
+                  <!--Title-->
+                  <h4 class="card-title" th:text="${prey.characterName}">이름</h4>
+                  <!--Text-->
+                  <p class="card-text" th:text="${prey.jobGrowName}">전직</p>
+                </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- 힐더 -->
+            <div class="col-lg-4 col-md-6 mb-4 힐더" th:each="hilder : ${hilder}">
+  
+              <!--Card-->
+              <div class="card">
+                <a href="/info/character?server=hilder&characterId=" th:attrappend="href=${hilder.characterId}">
+  
+                <!--Card image-->
+                <div class="view overlay character_background">
+                  <img src="https://img-api.neople.co.kr/df/servers/hilder/characters/" th:attrappend="src=${hilder.characterId}" class="card-img-top" alt="">
+                  
+                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                  
+                </div>
+  
+                <!--Card content-->
+                <div class="card-body">
+                  <!--Title-->
+                  <h4 class="card-title" th:text="${hilder.characterName}">이름</h4>
+                  <!--Text-->
+                  <p class="card-text" th:text="${hilder.jobGrowName}">전직</p>
+                </div>
+                </a>
+              </div>
+            </div>
+
+
+            <!-- 바칼 -->
+            <div class="col-lg-4 col-md-6 mb-4 바칼" th:each="bakal : ${bakal}">
+  
+              <!--Card-->
+              <div class="card">
+                <a href="/info/character?server=bakal&characterId=" th:attrappend="href=${bakal.characterId}">
+  
+                <!--Card image-->
+                <div class="view overlay character_background">
+                  <img src="https://img-api.neople.co.kr/df/servers/bakal/characters/" th:attrappend="src=${bakal.characterId}" class="card-img-top" alt="">
+                  
+                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                  
+                </div>
+  
+                <!--Card content-->
+                <div class="card-body">
+                  <!--Title-->
+                  <h4 class="card-title" th:text="${bakal.characterName}">이름</h4>
+                  <!--Text-->
+                  <p class="card-text" th:text="${bakal.jobGrowName}">전직</p>
+                </div>
+                </a>
+              </div>
+            </div>
+
+
+            <!-- 안톤 -->
+            <div class="col-lg-4 col-md-6 mb-4 안톤" th:each="anton : ${anton}">
+  
+              <!--Card-->
+              <div class="card">
+                <a href="/info/character?server=anton&characterId=" th:attrappend="href=${anton.characterId}">
+  
+                <!--Card image-->
+                <div class="view overlay character_background">
+                  <img src="https://img-api.neople.co.kr/df/servers/anton/characters/" th:attrappend="src=${anton.characterId}" class="card-img-top" alt="">
+                  
+                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                  
+                </div>
+  
+                <!--Card content-->
+                <div class="card-body">
+                  <!--Title-->
+                  <h4 class="card-title" th:text="${anton.characterName}">이름</h4>
+                  <!--Text-->
+                  <p class="card-text" th:text="${anton.jobGrowName}">전직</p>
+                </div>
+                </a>
+              </div>
+            </div>
+
+
+          
+            
+  
+          </div>
+            
+
+        </section>
+        </div>
+        <p class="msg" style="    text-align: center;
+        padding: 45px;">
+          <a href="http://developers.neople.co.kr" target="_blank">
+            <img src="../img/bi.png" alt="Neople 오픈 API">
+          </a>
+        </p>
+    </main>
+
+      <footer class="page-footer text-center font-small wow fadeIn" style="visibility: visible; animation-name: fadeIn; position: fixed; width: 100%;">
+        
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2019 Copyright:
+            <a href="http://dunpic.net" target="_blank"> dunpic.net</a>
+          </div>
+        <!--/.Copyright-->
+  
+      </footer>
+
+      <script type="text/javascript" src="/MDB/js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/MDB/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/mdb.min.js"></script>
+    <div class="hiddendiv common"></div>
+    <!-- Initializations -->
+    <script type="text/javascript">
+      // Animations initialization
+      new WOW().init();
+    </script>
+    <script>
+    // Material Select Initialization
+      $(document).ready(function() {
+        $('.mdb-select').materialSelect();
+      });
+    </script>
+    
+    <script>
+
+      $('#server_selector').change(function () {
+
+          var server = ["카인", "디레지에", "시로코", "카시야스", "프레이", "힐더", "안톤"];
+          var selectedServer = $(this).find("option:selected").text();
+
+          for(var index in server){
+            for(i=0; i< document.getElementsByClassName(server[index]).length; i++){
+              var deletedItem = document.getElementsByClassName(server[index])[i].style.display = "block";
+            }
+          }
+          
+          server.splice(server.indexOf(selectedServer),1);
+
+          console.log(server);
+
+          for(var index in server){
+            for(i=0; i< document.getElementsByClassName(server[index]).length; i++){
+              var deletedItem = document.getElementsByClassName(server[index])[i].style.display = "none";
+            }
+          }
+
+      });
+
+    </script>
+
+
+	
+</body>
+</html>

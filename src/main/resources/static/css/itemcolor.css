@@ -1,0 +1,49 @@
+@charset "EUC-KR";
+
+.커먼
+{
+	color : #7d7b7b;
+	font-weight : 560;
+}
+
+.언커먼
+{
+	color : #68D5ED;
+	font-weight : 560;
+}
+
+.레어
+{
+	color : #B36BFF;
+	font-weight : 560;
+}
+
+.유니크
+{
+	color : #FF00FF;
+	font-weight : 560;
+}
+
+.에픽
+{
+	color : #e2a106;
+	font-weight : 560;
+}
+
+.크로니클
+{
+	color : #FF6666;
+	font-weight : 560;
+}
+
+.레전더리
+{
+	color : #FF7800;
+	font-weight : 560;
+}
+
+.enchant{
+	color:black;
+	margin: 0 3px 0 3px;
+	font-size:11px;
+}

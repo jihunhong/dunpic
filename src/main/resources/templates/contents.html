@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184936-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121184936-1');
+</script>
+
+
+<meta property="og:title" content="DUNPIC 던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:description" content="던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:site_name" content="DUNPIC">
+<meta property="og:image" content="http://bbscdn.df.nexon.com/data6/commu/201901/173109_5c48264d24ea6.jpg">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+  <link href="/css/grid_contents.css" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="/MDB/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="/MDB/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="/MDB/css/style-0.0.4.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+  <style type="text/css">
+    /* Necessary for full page carousel*/
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
+    }
+
+    /* Carousel*/
+    .carousel,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100%;
+    }
+
+    .carousel-inner {
+      height: 100%;
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+      }
+    }
+  </style>
+  <style type="text/css">
+    /* Chart.js */
+    @-webkit-keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .chartjs-render-monitor {
+      -webkit-animation: chartjs-render-animation 0.001s;
+      animation: chartjs-render-animation 0.001s;
+    }
+  </style>
+
+</head>
+<body>
+<!-- Image and text -->
+	
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+    
+          <!-- Brand -->
+          <a class="navbar-brand" href="https://dunpic.net">
+            <strong>DUNPIC</strong>
+          </a>
+    
+          <!-- Collapse -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light c_a" href="/">HOME
+                  </a>
+                </li>
+                <li class="nav-item  active_nav">
+                  <a class="nav-link waves-effect waves-light c_a" href="/contents">CONTENTS
+                    <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light c_a" href="https://dunpic.net/board">COMMUNITY</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light c_a" href="/tip">
+                    ENCHANT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light c_a" href="/tip/reinforce">
+                    REINFORCE
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+              </ul>
+    
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
+              <li class="nav-item">
+                <a href="https://www.facebook.com/dunpic" class="nav-link waves-effect waves-light c_a" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="mailto:redgee49@gmail.com" class="nav-link waves-effect waves-light c_a" target="_blank">
+                  <i class="far fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+    
+          </div>
+    
+        </div>
+      </nav>
+
+      <div class="view">
+
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-white-light d-flex justify-content-center align-items-center">
+
+            
+          <!-- Content gallery (4 item)-->
+          <div class="wrapper">
+                <p>Contents </p>
+            <div class="gallery">
+              
+              <div class="photo" th:each="content : ${main_contents}"
+              th:style="'background-image:url(' + ${content.thumb} + ');'">
+              
+              <a href="/contents/" th:attrappend="href=${content.id}"></a>
+                <div class="card-body content-body">
+                    <!--Title-->
+          <!-- <h4 class="card-category"><span th:text="${content.category}">This is Content - Category </span></h4> -->
+                    <h6 class="card-title"><span>GUIDE</span></h6>
+                    <h4 class="card-title"><span th:text="${content.title}">This is Content - Title </span></h4>
+                    <!--Text-->
+                </div>
+              </a>
+              </div>
+
+            </div>
+          </div>
+          
+          <script>
+            // 이미지 크기 클래스 추가
+              document.getElementsByClassName("photo")[0].classList.add("big");
+              document.getElementsByClassName("photo")[1].classList.add("fat");
+          </script>
+
+        </div>
+      </div>
+
+      <footer class="page-footer text-center font-small wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+
+        <!--Call to action-->
+        <div class="row" style="    margin: 0px;
+        padding: 35px 280px 35px 280px;">
+
+
+          
+        </div>
+        <!--/.Call to action-->
+  
+        <hr class="my-4">
+
+          <div class="pb-1">
+              <p class="msg">
+                <a href="http://developers.neople.co.kr" target="_blank">
+                  <img src="../img/bi.png" alt="Neople 오픈 API">
+                </a>
+              </p>
+          </div>
+  
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2019 Copyright:
+            <a href="http://dunpic.net" target="_blank"> dunpic.net</a>
+          </div>
+        <!--/.Copyright-->
+  
+      </footer>
+
+      <script type="text/javascript" src="/MDB/js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/MDB/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/mdb.min.js"></script>
+    <div class="hiddendiv common"></div>
+    <!-- Initializations -->
+    <script type="text/javascript">
+      // Animations initialization
+      new WOW().init();
+    </script>
+	
+</body>
+</html>

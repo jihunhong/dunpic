@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184936-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121184936-1');
+</script>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/big.png">
+
+
+<meta property="og:title" content="DUNPIC 던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:description" content="던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:site_name" content="DUNPIC">
+<meta property="og:image" content="http://bbscdn.df.nexon.com/data6/commu/201901/173109_5c48264d24ea6.jpg">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+  <!-- Enchant menu CustomCSS -->
+  <link href="/css/enchant.css" rel="stylesheet">
+
+  <link href="/css/itemcolor.css" rel="stylesheet">
+  <link href="/css/reinforce.css" rel="stylesheet">
+  <link href="/css/char_info.css" rel="stylesheet">
+
+  <!-- Ajax Spinner CSS -->
+  <link href="/css/spinner.css" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="/MDB/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="/MDB/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="/MDB/css/style-0.0.4.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+  <meta property="og:title" content="DUNPIC 던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+  <meta property="og:description" content="던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+  <meta property="og:site_name" content="DUNPIC">
+  <meta property="og:image" content="http://bbscdn.df.nexon.com/data6/commu/201901/173109_5c48264d24ea6.jpg">
+  
+  <style type="text/css">
+    /* Necessary for full page carousel*/
+    html,
+    body,
+    .view {
+      height: 100%;
+    }
+
+    /* Carousel*/
+    .carousel,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100%;
+    }
+
+    .carousel-inner {
+      height: 100%;
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+      }
+    }
+
+    li p{
+        font-size: small;
+    }
+  </style>
+  <style type="text/css">
+    /* Chart.js */
+    @-webkit-keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .chartjs-render-monitor {
+      -webkit-animation: chartjs-render-animation 0.001s;
+      animation: chartjs-render-animation 0.001s;
+    }
+  </style>
+</head>
+<body>
+<!-- Image and text -->
+    
+    <header>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+    
+          <!-- Brand -->
+          <a class="navbar-brand" href="/">
+            <strong>DUNPIC</strong>
+          </a>
+    
+          <!-- Collapse -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/">HOME
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/contents">CONTENTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/tip">ENCHANT</a>
+              </li>
+              <li class="nav-item  active_nav">
+                <a class="nav-link waves-effect waves-light c_a" href="/tip/reinforce">
+                  REINFORCE
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+            </ul>
+    
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
+              <li class="nav-item">
+                <a href="https://www.facebook.com/dunpic" class="nav-link waves-effect waves-light c_a" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="mailto:redgee49@gmail.com" class="nav-link waves-effect waves-light c_a" target="_blank">
+                  <i class="far fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+    
+          </div>
+    
+        </div>
+      </nav>
+    </header>
+
+      <main class="mt-5 pt-5" style="    margin-bottom: 255px;">
+
+        
+        <div class="container">
+            <section>
+                    
+                    <select class="browser-default custom-select">
+                            <option selected>(무기를 선택하세요)</option>
+                            <optgroup label="귀검사,다크나이트,나이트">
+                                <option value="85edb9a78cbae43eb831ed1e1658c0d7">천공의 유산 - 소검</option>
+                                <option value="35a91a40bf6c906230b55ff5c3df7919">천공의 유산 - 도</option>
+                                <option value="085eaddf9a40ae8959770c88cf170ce6">천공의 유산 - 둔기</option>
+                                <option value="a0f7e5708196556425497f731411cabe">천공의 유산 - 대검</option>
+                                <option value="a0d071ddf858946a13c0cf0748c20e84">천공의 유산 - 광검</option>
+                            </optgroup>
+                            <optgroup label="격투가">
+                                <option value="033b7254b85b87eac1c0ee5c640bb31c">천공의 유산 - 너클</option>
+                                <option value="2614c7a41b157c9c93062c1c28e879dc">천공의 유산 - 건틀릿</option>
+                                <option value="58ebdaa578097f9c8270f071f5663b3d">천공의 유산 - 클로</option>
+                                <option value="984756582fc69aee21a31a0611f2b298">천공의 유산 - 권투글러브</option>
+                                <option value="1a1dc1c69a4cea7bb508eea7f5432619">천공의 유산 - 통파</option>
+                            </optgroup>
+                            <optgroup label="거너">
+                                <option value="9911b6aa04e37ff50973f4a8f0a4cf25">천공의 유산 - 리볼버</option>
+                                <option value="c4d7a49b78e89bba5f56e69918e3c650">천공의 유산 - 자동권총</option>
+                                <option value="d9fd33657697cfb66661eca151d6cbc7">천공의 유산 - 머스켓</option>
+                                <option value="96aa5076b55f4060396f79e42ed86eed">천공의 유산 - 핸드캐넌</option>
+                                <option value="5287cc0b8c9357932e11f38c71321da7">천공의 유산 - 보우건</option>
+                            </optgroup>
+                            <optgroup label="마법사,크리에이터">
+                                <option value="e2b048006bbc7ec35af3920f58fb831d">천공의 유산 - 창</option>
+                                <option value="556382e8d0ba2a17b58bfe65bc91e147">천공의 유산 - 봉</option>
+                                <option value="1454e5c0c28ea25df8bf413b48755e93">천공의 유산 - 로드</option>
+                                <option value="f6f314ea45bf0b1293eda8c3ccfbf668">천공의 유산 - 스태프</option>
+                                <option value="a1cbc035769e52598d91050a971ace33">천공의 유산 - 빗자루</option>
+                            </optgroup>
+                            <optgroup label="프리스트">
+                                <option value="d5bd63285c664e03bf742a61f5caff70">천공의 유산 - 십자가</option>
+                                <option value="34e1ee336457fe68a840b25b4d57e9b3">천공의 유산 - 염주</option>
+                                <option value="2e4a8dcdbe57f02c20639125fffe1958">천공의 유산 - 토템</option>
+                                <option value="a3334573dbf1e5fdc19305a8e68e9aae">천공의 유산 - 낫</option>
+                                <option value="7fba016fcc7ecbb5053b07ece9ca019f">천공의 유산 - 배틀액스</option>
+                            </optgroup>
+                            <optgroup label="도적">
+                                <option value="31e9b9ee64fa3fe64eaf39cc2c519d84">천공의 유산 - 단검</option>
+                                <option value="93b220ecb9e5989e731a143ed8dac138">천공의 유산 - 쌍검</option>
+                                <option value="b4b1f38247235553c1f24fba98dbdf48">천공의 유산 - 완드</option>
+                                <option value="252283ae72689e67c46786977af5aee4">천공의 유산 - 차크라 웨펀</option>
+                            </optgroup>
+                            <optgroup label="마창사">
+                                <option value="39b0a88bd32f498f08f9509586dd145e">천공의 유산 - 장창</option>
+                                <option value="09ba3709a6553def011badc2b8954475">천공의 유산 - 미늘창</option>
+                                <option value="6f44361b7fb97981808058fa657eb4fe">천공의 유산 - 광창</option>
+                                <option value="0fe88d2363d7ccb1acb1f48889f8ade6">천공의 유산 - 투창</option>
+                            </optgroup>
+                            <optgroup label="총검사">
+                                    <option value="7fffca4f90b559ddc8bb09b8e853d50e">천공의 유산 - 중검</option>
+                                    <option value="49c481a41132572c61eb1997e4feb3ab">천공의 유산 - 소태도</option>
+                                    <option value="a5ee4b6ad6f6ac91ad48d125b715d842">천공의 유산 - 장도</option>
+                                    <option value="de7e75e712ca8a2201692d6f4e7e3b6f">천공의 유산 - 코어블레이드</option>
+                            </optgroup>
+                    </select>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 card_list">
+                            <ul id="cards">
+                                <li id="item_card" class="wow bounce" style="animation-name: bounce;">
+                                <div class="card_header" style="text-align: left; background-color: floralwhite">
+                                    <span class="card_thumb">
+                                        <img id='weapon_img'>
+                                    </span>
+                                    <span class='cardname' id="cardname"></span>
+                                </div>
+                                
+                                  <span class="card_effect">
+                                    <p id="reinforce_status" value="0"> 현재 강화 수치 :
+                                    </p>
+                                    <span class="amount_gold">💰 누적골드  </span>
+                                    <span class="reinforce_cost">💸 강화비  </span>
+                                  </span>
+                                </li>
+                            </ul>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 result_table">
+                      <img class="item_img" src="https://img-api.neople.co.kr/df/items/85edb9a78cbae43eb831ed1e1658c0d7">
+                      <span class="에픽">천공의 유산 - 소검</span>
+                      <p class="false">
+                        <span>+13강화</span>
+                        <span>실패</span>
+                      </p>
+
+                    </div>
+                
+
+            </section>
+        </div>
+        <p class="msg" style="    text-align: center;
+        padding: 45px;">
+          <a href="http://developers.neople.co.kr" target="_blank">
+            <img src="../img/bi.png" alt="Neople 오픈 API">
+          </a>
+        </p>
+    </main>
+
+      <footer class="page-footer text-center font-small wow fadeIn" style="visibility: visible; animation-name: fadeIn; position: fixed; width: 100%;">
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2019 Copyright:
+            <a href="http://dunpic.net" target="_blank"> dunpic.net</a>
+          </div>
+        <!--/.Copyright-->
+  
+      </footer>
+
+      <script type="text/javascript" src="/MDB/js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/MDB/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/mdb.min.js"></script>
+    <div class="hiddendiv common"></div>
+    <!-- Initializations -->
+    <script type="text/javascript">
+      // Animations initialization
+      new WOW().init();
+    </script>
+
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+    <script>
+
+      $('.card_list').hide();
+      $('.result_table').hide();
+
+      $(function(){
+        $('.custom-select').change(function(){
+          var url_init = 'https://img-api.neople.co.kr/df/items/';
+
+          $('.card_list').show();
+
+          document.getElementById('weapon_img').src =  url_init + this.value;
+          document.getElementById('cardname').innerHTML = $('.custom-select option:selected').text() ; 
+        })
+      });
+    </script>
+
+    <script>
+      document.getElementById('item_card').addEventListener('click', function() {
+         $('.result_table').show();
+      });
+
+    </script>
+
+	
+</body>
+
+</html>

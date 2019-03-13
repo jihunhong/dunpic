@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184936-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121184936-1');
+</script>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/big.png">
+
+
+<meta property="og:title" content="DUNPIC 던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:description" content="던파 캐릭터검색 직업별 가이드 공략 커뮤니티">
+<meta property="og:site_name" content="DUNPIC">
+<meta property="og:image" content="http://bbscdn.df.nexon.com/data6/commu/201901/173109_5c48264d24ea6.jpg">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="/MDB/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="/MDB/css/mdb.min.css" rel="stylesheet">
+  
+  <!-- Your custom styles (optional) -->
+  <link href="/MDB/css/style-0.0.4.min.css" rel="stylesheet">
+  <link href="/css/enchant.css" rel="stylesheet">
+  <link href="/css/char_info.css" rel="stylesheet">
+  <link href="/css/itemcolor.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+
+  <style type="text/css">
+    /* Necessary for full page carousel*/
+    html,
+    body,
+    .view {
+      height: 100%;
+    }
+
+    /* Carousel*/
+    .carousel,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100%;
+    }
+
+    .carousel-inner {
+      height: 100%;
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+      }
+    }
+
+    li p{
+        font-size: small;
+    }
+
+    .character_background{
+      background-image: url(https://image.freepik.com/free-vector/bright-background-with-dots_1055-3132.jpg); 
+      background-size: cover;
+    }
+
+    .card-title, .card-text{
+      color: black !important;
+    }
+  </style>
+  <style type="text/css">
+    /* Chart.js */
+    @-webkit-keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes chartjs-render-animation {
+      from {
+        opacity: 0.99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .chartjs-render-monitor {
+      -webkit-animation: chartjs-render-animation 0.001s;
+      animation: chartjs-render-animation 0.001s;
+    }
+  </style>
+
+</head>
+<body>
+<!-- Image and text -->
+    
+    <header>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+    
+          <!-- Brand -->
+          <a class="navbar-brand" href="/">
+            <strong>DUNPIC</strong>
+          </a>
+    
+          <!-- Collapse -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/">HOME
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/contents">CONTENTS</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="https://dunpic.net/board">COMMUNITY</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/tip">
+                  ENCHANT
+                  <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light c_a" href="/tip/reinforce">
+                  REINFORCE
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+            </ul>
+    
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
+              <li class="nav-item">
+                <a href="https://www.facebook.com/dunpic" class="nav-link waves-effect waves-light c_a" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="mailto:redgee49@gmail.com" class="nav-link waves-effect waves-light c_a" target="_blank">
+                  <i class="far fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+    
+          </div>
+    
+        </div>
+      </nav>
+    </header>
+
+      <main class="mt-5 pt-5" style="margin-bottom:180px;">
+
+        
+        <div class="container">
+            <section>
+
+                    <div class="row" id="panelPrecios">
+        	
+                            <div class="col-lg-3 
+                                col-md-3
+                                col-sm-12
+                                col-xs-12 info_default">
+                                <div class="circle" th:style="'background-image:url(https://img-api.neople.co.kr/df/servers/'  
+                                                               + @{${server}}  
+                                                              + '/characters/' 
+                                                              + @{${info.characterId}} 
+                                                              + '?zoom=2);'"></div>
+
+                                <div class="user_name" th:text="${info.characterName}">
+                                    username
+                                </div>
+                                <div class="grown_name" th:text="${info.jobGrowName}">
+                                    GrowName
+                                </div>
+                                <div class="guild_info">
+                                    <p th:text="${info.guildName} != null ? '⛨' + ${info.guildName}"></p>
+                                    <p th:text="'⚔️' + ${info.adventureName}"></p>
+                                </div>
+                                <div class="armor_blank">
+                
+                                </div>
+                                <div class="timeline_link">
+                                  <a th:href="'/timeline?server=' + ${server} + '&characterId=' + ${info.characterId}" style="color:white;">
+                                    타임라인
+                                  </a>
+                                  
+                                </div>
+
+                            </div>
+                                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 tab_box">
+                                    <div role="tabpanel" style="margin-top:10px;">
+                                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#equipment" role="tab" aria-controls="equipment" aria-selected="true">장착장비</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="buff-tab" data-toggle="tab" href="#buff" role="tab" aria-controls="buff" aria-selected="false">버프강화</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="status-tab" data-toggle="tab" href="#status" role="tab" aria-controls="status" aria-selected="false">능력치</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="avatar-tab" data-toggle="tab" href="#avatar" role="tab" aria-controls="avatar" aria-selected="false">아바타</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="creature-tab" data-toggle="tab" href="#creature" role="tab" aria-controls="creature" aria-selected="false">크리쳐</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="flag-tab" data-toggle="tab" href="#flag" role="tab" aria-controls="flag" aria-selected="false">휘장</a>
+                                        </li>
+                                      </ul>
+                                    
+                                      <!-- Tab panes -->
+                                        
+                                      <!-- 장착장비 -->
+                                      <div class="tab-content"  id="myTabContent">
+                                          <div role="tabpanel" class="tab-pane fade show active" id="equipment" aria-labelledby="equipment-tab">
+                                            <table class="table table-hover" style="margin-bottom:0px;">
+                                              <tbody>
+                                              
+                                                  
+                                                    <tr th:each="equip : ${equipment}">
+                                                    <th scope="row" th:text="${equip.slotName}"></th>      
+                                                        <td>
+                                                            <img class="item_img" src='https://img-api.neople.co.kr/df/items/' th:attrappend="src=${equip.itemId}"/>
+                                                            <span th:class="${equip.itemRarity }" th:text="${equip.itemName }"></span>
+                                                            
+                                                            <th:block th:if="${#maps.containsKey(equip, 'enchant')}">
+                                                              <!-- 인챈트 정보 있는지 판별 -->
+
+                                                              <th:block th:if="${#maps.containsKey(equip.enchant, 'status')}">
+                                                                <!-- TRUE -->
+                                                                  <p th:each="enchant : ${equip.enchant.status}" style="font-size:11px; margin:0 3px 0 3px;" 
+                                                                  th:text="${enchant.name} + '+' + ${enchant.value}"></p>
+                                                              </th:block>
+                                                              
+                                                              <!-- 일반 인챈트 정보 -->
+
+                                                              <th:block th:unless="${#maps.containsKey(equip.enchant, 'status')}">
+                                                                <!-- FALSE -->
+
+                                                                  <th:block th:if="${#maps.containsKey(equip.enchant, 'explain')}">
+                                                                      <p style="font-size:11px; margin:0 3px 0 3px;" 
+                                                                      th:text="${equip.enchant.explain}"></p>
+                                                                  </th:block>
+
+                                                                  <th:block th:unless="${#maps.containsKey(equip.enchant, 'explain')}">
+                                                                    <p th:each="enchant : ${equip.enchant.reinforceSkill[0].skills}" style="font-size:11px; margin:0 3px 0 3px;" 
+                                                                    th:text="${enchant.name} + '+' + ${enchant.value}"></p>
+                                                                  </th:block>
+
+                                                              </th:block>
+                                                              <!-- 스킬 인챈트 정보 -->
+
+                                                            </th:block>
+                                                            <th:block th:unless="${#maps.containsKey(equip, 'enchant')}">
+                                                              <p> - </p>
+                                                              <!-- 인챈트 없음 -->
+                                                            </th:block>
+                                                            
+                                                        </td>
+
+                                                        <td class="에픽" th:text="${equip.reinforce != 0} ? '+' + ${equip.reinforce}+ ' 강화'"></td>
+  
+                                                        <td class="유니크" th:text="${equip.amplificationName} != null ? '+' + ${equip.reinforce} + ' 증폭'" >
+                                                        </td>
+                                                    </tr>
+                                                  
+                                              
+                                              </tbody>
+                                            </table>
+                                        </div>
+                                      
+                                      <!-- 장착장비 -->
+
+                                      <!-- 버프 강화 -->
+                                      
+                                          <div role="tabpanel" class="tab-pane fade" id="buff" aria-labelledby="buff-tab">
+                                            <table class="table table-hover" style="margin-bottom:0px;">
+                                              <tbody>
+                                              
+                                                  
+                                                    <tr th:if="${buff_equip.buff.equipment} != null" th:each="buff : ${buff_equip.buff.equipment}">
+                                                    <th scope="row" th:text="${buff.slotName}"></th>      
+                                                        <td>
+                                                            <img class="item_img" src='https://img-api.neople.co.kr/df/items/' th:attrappend="src=${buff.itemId}"/>
+                                                            <span th:class="${buff.itemRarity }" th:text="${buff.itemName }">
+                                                                
+                                                                
+                                                                  <!-- <c:if test="${!empty equipment[index].enchant.status[1].name}">
+                                                                <span class="enchant">| ${equipment[index].enchant.status[1].name} +${equipment[index].enchant.status[1].value}</span>
+                                                              </c:if> -->
+                                                              
+                                                            
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                              </tbody>
+                                            </table>
+                                        </div>
+                                      
+                                      <!-- 버프 강화 -->
+
+                                      <!-- 스탯 -->
+                                      <div role="tabpanel" class="tab-pane fade" id="status" aria-labelledby="status-tab">
+                                          <table class="table table-hover" style="margin-bottom:0px;">
+                                            <tbody>
+                                            
+                                                
+                                                <tr th:each="status : ${status}">
+                                                    <th scope="row" th:class="${status.name}" th:text="${status.name}"></th>      
+                                                    <td class="${status.name}" th:text="${status.value}">${status[index].value}</td>
+                                                </tr>
+
+                                            </tbody>
+                                          </table>
+                                      </div>
+                                    
+                                    <!-- 스탯 -->
+
+                                    <!-- 아바타 -->
+                                    <div role="tabpanel" class="tab-pane fade" id="avatar" aria-labelledby="avatar-tab">
+                                        <table class="table table-hover" style="margin-bottom:0px;">
+                                          <tbody>
+                                          
+                                              
+                                                <tr th:if="${avatar} != null" th:each="avatar : ${avatar}">
+                                                <th scope="row" th:text="${avatar.slotName}"></th>      
+                                                    <td>
+                                                        <img class="item_img" src='https://img-api.neople.co.kr/df/items/' th:attrappend="src=${avatar.itemId}"/>
+                                                        <span th:class="${avatar.itemRarity }" th:text="${avatar.itemName }"></span>
+                                                          <p class="avatar_option" th:text="${avatar.optionAbility}"></p>
+                                                          <p th:each="emblem : ${avatar.emblems}" th:class="'avatar_emblems ' + ${emblem.itemRarity}" style="font-size:11px; margin:0 3px 0 3px;" th:text="${emblem.itemName}"></p>
+                                                    </td>
+                                                </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 아바타 -->
+
+                                    <!-- 크리쳐 -->
+                                    <div role="tabpanel" class="tab-pane fade" id="creature" aria-labelledby="creature-tab">
+                                        <table class="table table-hover" style="margin-bottom:0px;">
+                                          <tbody>
+                                          
+                                              
+                                            <th:block th:if="${#maps.containsKey(creature, 'itemId')}">
+                                                <tr>
+                                                <th scope="row" th:text="크리쳐"></th>      
+                                                    <td>
+                                                        <img class="item_img" src='https://img-api.neople.co.kr/df/items/' th:attrappend="src=${creature.itemId}"/>
+                                                        <span th:class="${creature.itemRarity }" th:text="${creature.itemName }"></span>
+                                                    </td>
+                                                </tr>
+                                              </th:block>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 크리쳐 -->
+
+                                    <!-- 휘장 -->
+                                    <div role="tabpanel" class="tab-pane fade" id="flag" aria-labelledby="flag-tab">
+                                        <table class="table table-hover" style="margin-bottom:0px;">
+                                          <tbody>
+                                                <tr>
+                                                <th scope="row" th:text="휘장"></th>      
+                                                    <td>
+                                                        <img class="item_img" src='https://img-api.neople.co.kr/df/items/' th:attrappend="src=${flag.itemId}"/>
+                                                        <span th:class="${flag.itemRarity }" th:text="${flag.itemName }"></span>
+                                                        <p class="avatar_option" th:text="${flag.itemAbility}"></p>
+                                                    </td>
+                                                </tr>
+                                                <tr th:each="gem : ${flag.gems}">
+                                                  <th scope="row">젬</th>
+                                                  <td>
+                                                      <img class="item_img" src='https://img-api.neople.co.kr/df/items/' th:attrappend="src=${gem.itemId}"/>
+                                                      <span th:class="${gem.itemRarity }" th:text="${gem.itemName }"></span>
+                                                      <p class="avatar_option" th:text="${gem.itemAbility}"></p>
+                                                  </td>
+                                                </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 휘장 -->
+
+                                  
+                                  </div>
+                                    </div>
+                                </div>
+                            </div>
+
+            </section>
+        </div>
+        <p class="msg" style="    text-align: center;
+        padding: 45px;">
+          <a href="http://developers.neople.co.kr" target="_blank">
+            <img src="../img/bi.png" alt="Neople 오픈 API">
+          </a>
+        </p>
+    </main>
+    
+
+      <footer class="page-footer text-center font-small wow fadeIn" style="visibility: visible; animation-name: fadeIn; position: fixed; width: 100%;">
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2019 Copyright:
+            <a href="http://dunpic.net" target="_blank"> dunpic.net</a>
+          </div>
+        <!--/.Copyright-->
+  
+      </footer>
+
+      <script type="text/javascript" src="/MDB/js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/MDB/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/MDB/js/mdb.min.js"></script>
+    <div class="hiddendiv common"></div>
+    <!-- Initializations -->
+    <script type="text/javascript">
+      // Animations initialization
+      new WOW().init();
+    </script>
+
+    <script>
+          $('#myTab a').on('click', function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+    
+    </script>
+    <script>
+      console.log("${server}");
+
+    </script>
+
+ 
+</body>
+</html>
