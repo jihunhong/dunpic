@@ -9,4 +9,4 @@
 
 ## 📷 ScreenShot
 
-<center>![기록1](/img/0.PNG)</center>
+작성중 ...
