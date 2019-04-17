@@ -3,14 +3,22 @@
  
 <head>
 
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184936-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184936-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-121184936-1');
-</script> -->
+</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8284554096460532",
+          enable_page_level_ads: true
+     });
+</script>
 
 <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -149,18 +157,18 @@
             <!-- Left -->
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link waves-effect waves-light c_a" href="/">HOME
+                <a class="nav-link waves-effect waves-light" href="/">HOME
                 </a>
               </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="/contents">CONTENTS</a>
+              </li> -->
               <li class="nav-item">
-                <a class="nav-link waves-effect waves-light c_a" href="/contents">CONTENTS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link waves-effect waves-light c_a" href="/tip">ENCHANT</a>
+                <a class="nav-link waves-effect waves-light" href="/tip">ENCHANT</a>
               </li>
               <li class="nav-item  active_nav">
-                <a class="nav-link waves-effect waves-light c_a" href="/tip/reinforce">
-                  REINFORCE
+                <a class="nav-link waves-effect waves-light" href="/tip/reinforce">
+                  REINFORCE (BETA💦)
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
@@ -169,12 +177,12 @@
             <!-- Right -->
             <ul class="navbar-nav nav-flex-icons">
               <li class="nav-item">
-                <a href="https://www.facebook.com/dunpic" class="nav-link waves-effect waves-light c_a" target="_blank">
+                <a href="https://www.facebook.com/dunpic" class="nav-link waves-effect waves-light" target="_blank">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="mailto:redgee49@gmail.com" class="nav-link waves-effect waves-light c_a" target="_blank">
+                <a href="mailto:redgee49@gmail.com" class="nav-link waves-effect waves-light" target="_blank">
                   <i class="far fa-envelope"></i>
                 </a>
               </li>
@@ -247,7 +255,7 @@
                                     <option value="a5ee4b6ad6f6ac91ad48d125b715d842">천공의 유산 - 장도</option>
                                     <option value="de7e75e712ca8a2201692d6f4e7e3b6f">천공의 유산 - 코어블레이드</option>
                             </optgroup>
-                    </select>
+                    </select>                    
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 card_list">
                             <ul id="cards">
@@ -262,12 +270,28 @@
                                   <span class="card_effect">
                                     <p class="wow bounce" style="animation-name: bounce;" id="reinforce_status" value="0"> 🔨 현재 강화 수치 : +0
                                     </p>
-                                    <span class="amount_gold">💰 누적골드  </span>
-                                    <span class="reinforce_cost">💸 보호권  </span>
+                                    <span id="gold_amount" value="0">💰 누적 강화비용  </span>
+                                    <!-- <span class="reinforce_cost">📜 보호권  </span> -->
+                                    <span id="cube_amount">✨ 누적 무큐  </span> <span id="cube_gold" value="0"></span>
+                                    <p id="gold_sum" value="0">💸 총 합계 골드 </p>
                                   </span>
                                 </li>
                             </ul>
                     </div>
+
+                    <div align="center">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- test -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-8284554096460532"
+                            data-ad-slot="5982981230"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                      </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 result_table">
                       
@@ -314,103 +338,10 @@
         $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-    
-
-
-    <script>
-      var count = 0;
-      
-      document.getElementById('item_card').addEventListener('click', function() {
-        
-        count++;
-
-        console.log(count);
-        
-        $('.result_table').show();
-         
-         var reinforce_status = document.getElementById('reinforce_status').getAttribute("value");
-
-         var random_init   = Math.random()*100;
-         var random_number = random_init.toFixed(1);
-
-         var probability = [100, 100, 100, 100, 80, 70, 60, 50, 40, 30, 25.9, 18, 12.7, 8.3, 5.6];
-
-         var result = false;
-
-         if(random_number <= probability[reinforce_status]){
-           result = true;
-           write_record(result);
-           document.getElementById('reinforce_status').setAttribute("value", Number(reinforce_status)+1);
-           refresh_status();
-           
-         }else{
-            if(Number(reinforce_status) == 10 ||  Number(reinforce_status) == 11){
-                write_record(result);
-                document.getElementById('reinforce_status').setAttribute("value", Number(reinforce_status)-3);
-                refresh_status();
-           }else if(Number(reinforce_status) >= 12){
-                write_record(result);
-                document.getElementById('reinforce_status').setAttribute("value", 0);
-                refresh_status();
-           }else{
-                write_record(result);
-                refresh_status();
-           }
-
-         }
-
-      });
-
-
-      function write_record(result){
-
-        var judge = result;
-        var table = $('.result_table')[0];
-
-        var item_name = document.getElementById("cardname").innerHTML;
-        var item_img  = document.getElementById('weapon_img').src;
-
-        var reinforce_status = document.getElementById('reinforce_status').getAttribute("value");
-          
-        table.innerHTML += "<img class='item_img' src='" + item_img + "' style='animation-name: bounce; visibility: visible;'>"
-                          +   "<span class='에픽'>" + item_name + "</span>"
-                          +   "<p class='"+ judge +"'>"
-                          +   "<span>+ " + reinforce_status + " ▶️ " + (Number(reinforce_status)+1) + "</span>"
-                          +   "</p>";
-      }
-
-      function refresh_status(){
-        document.getElementById('reinforce_status').innerHTML = "🔨 현재 강화 수치 : +" + document.getElementById('reinforce_status').getAttribute("value");
-        
-        var table = $('.result_table');
-
-        table[0].scrollTo(0, document.body.scrollHeight);
-      }
-
-      $('.card_list').hide();
-      $('.result_table').hide();
-
-      $(function(){
-        $('.custom-select').change(function(){
-          var url_init = 'https://img-api.neople.co.kr/df/items/';
-
-          count = 0;
-
-
-          $('.card_list').show();
-
-          document.getElementById('weapon_img').src =  url_init + this.value;
-          document.getElementById('cardname').innerHTML = $('.custom-select option:selected').text() ; 
-          document.getElementsByClassName('result_table')[0].innerHTML = "";
-          document.getElementById('reinforce_status').setAttribute("value", Number(0));
-          refresh_status();
-        })
-      });
-
-
+    <script type="text/javascript" src="/js/reinforce.js">
     </script>
 
-	
+  
 </body>
 
 </html>

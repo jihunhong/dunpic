@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.oz.dunpic.DAO.CardDAO;
 import com.oz.dunpic.DAO.ContentsDAO;
 import com.oz.dunpic.DAO.PostDAO;
 import com.oz.dunpic.DAO.ResultDAO;
+import com.oz.dunpic.Entity.Card;
 import com.oz.dunpic.Entity.Contents;
 import com.oz.dunpic.Entity.Post;
 import com.oz.dunpic.Entity.Result;
@@ -26,10 +28,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@ActiveProfiles("ec2")
 public class DemoApplicationTests {
 
 	@Test
@@ -39,13 +43,14 @@ public class DemoApplicationTests {
 	@Autowired
 	ContentsDAO contentsDAO;
 
+	@Autowired
+	CardDAO cardDAO;
 	@Test
 	public void Top3_Contents_DB_TEST(){
 
 		
-		List<Contents> contents = contentsDAO.findTop3ByOrderByIdDesc();
+		List<Card> card = cardDAO.findByPartForGroup("무기");
 
-		
 	}
 
 	@Test

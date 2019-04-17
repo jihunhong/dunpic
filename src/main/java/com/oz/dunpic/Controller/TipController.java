@@ -1,5 +1,4 @@
-﻿package com.oz.dunpic.Controller;
-
+package com.oz.dunpic.Controller;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -28,6 +27,7 @@ import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -50,6 +50,9 @@ public class TipController {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	EntityManager em;
+
+	@Value("${apikey}")
+    String apikey;
 	
 	@Autowired
 	private CardDAO cardDAO;
@@ -109,7 +112,8 @@ public class TipController {
 		
 		itemid = URLEncoder.encode(itemid, "UTF-8");
 		String url = "https://api.neople.co.kr/df/auction?itemId="+itemid
-				+ "&q=minLevel%3A%3CminLevel%3E%2CmaxLevel%3A%3CmaxLevel%3E%2Crarity%3A%3Crarity%3E%2CminReinforce%3A%3CminReinforce%3E%2CmaxReinforce%3A%3CmaxReinforce%3E%2CminRefine%3A%3CminRefine%3E%2CmaxRefine%3A%3CmaxRefine%3E&sort=unitPrice:asc,reinforce:%3Creinforce%3E,auctionNo:%3CauctionNo%3E&limit=1&wordType=%3CwordType%3E&apikey=";		
+				+ "&q=minLevel%3A%3CminLevel%3E%2CmaxLevel%3A%3CmaxLevel%3E%2Crarity%3A%3Crarity%3E%2CminReinforce%3A%3CminReinforce%3E%2CmaxReinforce%3A%3CmaxReinforce%3E%2CminRefine%3A%3CminRefine%3E%2CmaxRefine%3A%3CmaxRefine%3E&sort=unitPrice:asc,reinforce:%3Creinforce%3E,auctionNo:%3CauctionNo%3E&limit=1&wordType=%3CwordType%3E&apikey="
+				+ apikey;		
 
 		HttpGet httpGet = new HttpGet(url);
 		
@@ -129,15 +133,18 @@ public class TipController {
 
 	}
 	
-	@RequestMapping(value="/enchant/id_commit", method = RequestMethod.GET)
-	public @ResponseBody Object card_commit(@RequestParam("cardname") String cardname) throws ClientProtocolException, IOException, ParseException{
-		
-		
+
+	@RequestMapping("/reinforce")
+	public String 강화() {
+		return "reinforce";
+	}
+
+	@RequestMapping(value="/reinforce/cube_price", method = RequestMethod.GET)
+	public @ResponseBody Object cube_price() throws ClientProtocolException, IOException, ParseException{
 		HttpClient httpClient = HttpClientBuilder.create().build();
-		
-		cardname = URLEncoder.encode(cardname, "UTF-8");
-		String url = "https://api.neople.co.kr/df/items?itemName="+cardname
-				+ "&q=minLevel%3A%3CminLevel%3E%2CmaxLevel%3A%3CmaxLevel%3E%2Crarity%3A%3Crarity%3E%2Ctrade%3A%3Ctrade%3E&limit=%3Climit%3E&wordType=match&apikey=";		
+
+		String url = "https://api.neople.co.kr/df/auction?itemId=785e56a0ed4e3efd573da1f56a45217d&limit=5&wordType=&apikey="
+					  + apikey;
 
 		HttpGet httpGet = new HttpGet(url);
 		
@@ -148,26 +155,16 @@ public class TipController {
 		JSONParser jsonParser = new JSONParser();
     	JSONObject jsonObject = (JSONObject) jsonParser.parse(json);
     	JSONArray rowArray = (JSONArray) jsonObject.get("rows");
-		
-    	if(rowArray.get(0) != null) {
+
+    	if(rowArray.size() > 0 ) {
 
         	return rowArray.get(0);
     	}
     	else return null;
-	}
-	
-	@RequestMapping(value="/enchant/id_commit2", method = RequestMethod.GET)
-	public @ResponseBody void card_commit2(@RequestParam("cardname") String cardname,@RequestParam("itemId") String itemId) throws ClientProtocolException, IOException, ParseException{
-		Card card = cardDAO.findByCardname(cardname);
-		card.setItemId(itemId);
-		cardDAO.save(card);
+
 	}
 
 
-	@RequestMapping("/reinforce")
-	public String 강화() {
-		return "reinforce";
-	}
 
 
 

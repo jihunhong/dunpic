@@ -17,6 +17,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +27,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class TimeLineController {
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    String apikey = "";
+    @Value("${apikey}")
+    String apikey;
 
     @RequestMapping("/timeline")
     public String Timeline(HttpServletRequest request, Model model)

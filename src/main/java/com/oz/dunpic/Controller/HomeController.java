@@ -27,6 +27,7 @@ import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,7 +39,8 @@ public class HomeController {
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	
-	String apikey = "whdRL7UsbCRRZnkJ8QCflkgArX4qbjSz";
+	@Value("${apikey}")
+    String apikey;
 	
 	@Autowired
 	ContentsDAO contentsDAO;

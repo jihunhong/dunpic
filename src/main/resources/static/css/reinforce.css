@@ -47,6 +47,7 @@
 
 .card_effect p{
   padding: 5px;
+  font-size: larger;
 }
 
 .card_effect #reinforce_status{

@@ -2,12 +2,22 @@ package com.oz.dunpic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+@EnableJpaAuditing
 @SpringBootApplication
 public class DemoApplication {
 
+	public static final String APPLICATION_LOCATIONS = "spring.config.location="
+					+ "classpath:application.yml,"
+					+ "/app/config/dunpic_mdb/application-db.yml";
+
 	public static void main(String[] args) {
-       		SpringApplication.run(DemoApplication.class, args);
+			   new SpringApplicationBuilder(DemoApplication.class)
+						.properties(APPLICATION_LOCATIONS)
+						.run(args);
+			   
 	}
 
 }

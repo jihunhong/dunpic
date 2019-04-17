@@ -1,6 +1,6 @@
 function part_click(clicked_id)
 {
-    var part = clicked_id;
+	var part = clicked_id;
 
     $.ajax({
 		url: "/tip/enchant/equip?part=" + encodeURIComponent(part),
