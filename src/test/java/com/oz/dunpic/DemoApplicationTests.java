@@ -43,18 +43,18 @@ public class DemoApplicationTests {
 	public void contextLoads() {
 	}
 
-	@Autowired
-	ContentsDAO contentsDAO;
+	// @Autowired
+	// ContentsDAO contentsDAO;
 
-	@Autowired
-	CardDAO cardDAO;
-	@Test
-	public void Top3_Contents_DB_TEST(){
+	// @Autowired
+	// CardDAO cardDAO;
+	// @Test
+	// public void Top3_Contents_DB_TEST(){
 
 		
-		List<Card> card = cardDAO.findByPartForGroup("무기");
+	// 	List<Card> card = cardDAO.findByPartForGroup("무기");
 
-	}
+	// }
 
 	@Test
 	public void URLComposer() throws ClientProtocolException, IOException, ParseException {
@@ -92,21 +92,21 @@ public class DemoApplicationTests {
 	}
 
 
-	@Autowired
-	ResultDAO resultDAO;
-	@Test
-		public void EnchantCardFetchingTesting(){
-			List<Result> subquery = resultDAO.findBySubquery("상의", "물리 공격력");
-			List<Result> main = new ArrayList<>();
+	// @Autowired
+	// ResultDAO resultDAO;
+	// @Test
+	// 	public void EnchantCardFetchingTesting(){
+	// 		List<Result> subquery = resultDAO.findBySubquery("상의", "물리 공격력");
+	// 		List<Result> main = new ArrayList<>();
 
-			for(int i=0; i<subquery.size(); i++){
-				int id = subquery.get(i).getId();
-				List<Result> fetch = resultDAO.findByIdInJoinTable(id);
-				main.addAll(fetch);
-			}
+	// 		for(int i=0; i<subquery.size(); i++){
+	// 			int id = subquery.get(i).getId();
+	// 			List<Result> fetch = resultDAO.findByIdInJoinTable(id);
+	// 			main.addAll(fetch);
+	// 		}
 
 
-		}
+	// 	}
 		
 
 }
