@@ -9,7 +9,7 @@
   </parent>
   <groupId>com.oz</groupId>
   <artifactId>dunpic</artifactId>
-  <version>0.0.5-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>demo</name>
   <description>Demo project for Spring Boot</description>
   <properties>
