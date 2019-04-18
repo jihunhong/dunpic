@@ -53,40 +53,40 @@ public class DemoApplicationTests {
 
 	}
 
-	@Test
-	public void URLComposer() throws ClientProtocolException, IOException, ParseException {
+	// @Test
+	// public void URLComposer() throws ClientProtocolException, IOException, ParseException {
 
 	
-		String url = "https://api.neople.co.kr/df/servers/"+ "cain"
-							+ "/characters/"+ "fbe0fa8a9d47cbdca4be09e1524e7ea9" 
-							+ "/equip/" + "equipment"
-							+ "?apikey=" + "whdRL7UsbCRRZnkJ8QCflkgArX4qbjSz";
+	// 	String url = "https://api.neople.co.kr/df/servers/"+ "cain"
+	// 						+ "/characters/"+ "fbe0fa8a9d47cbdca4be09e1524e7ea9" 
+	// 						+ "/equip/" + "equipment"
+	// 						+ "?apikey=" + "whdRL7UsbCRRZnkJ8QCflkgArX4qbjSz";
 
-		HttpClient httpClient = HttpClientBuilder.create().build();
+	// 	HttpClient httpClient = HttpClientBuilder.create().build();
 		
-		HttpGet httpGet = new HttpGet(url);
+	// 	HttpGet httpGet = new HttpGet(url);
 		
-		HttpResponse response = httpClient.execute(httpGet);	
+	// 	HttpResponse response = httpClient.execute(httpGet);	
 		
-		String json = EntityUtils.toString(response.getEntity());
+	// 	String json = EntityUtils.toString(response.getEntity());
 
-		EntityUtils.consume(response.getEntity());
+	// 	EntityUtils.consume(response.getEntity());
 		
-		JSONParser jsonParser = new JSONParser();
-		JSONObject info_Object = (JSONObject) jsonParser.parse(json);
-		// 기본정보
+	// 	JSONParser jsonParser = new JSONParser();
+	// 	JSONObject info_Object = (JSONObject) jsonParser.parse(json);
+	// 	// 기본정보
 		
-		JSONArray equipment = (JSONArray)info_Object.get("equipment");
+	// 	JSONArray equipment = (JSONArray)info_Object.get("equipment");
 
-		for(int i=0; i<equipment.size(); i++){
-			JSONObject item = (JSONObject)equipment.get(i);
-			JSONObject enchant = (JSONObject) item.get("enchant");
-			if(item.containsKey("enchant")){
+	// 	for(int i=0; i<equipment.size(); i++){
+	// 		JSONObject item = (JSONObject)equipment.get(i);
+	// 		JSONObject enchant = (JSONObject) item.get("enchant");
+	// 		if(item.containsKey("enchant")){
 
-			}
-		}
+	// 		}
+	// 	}
 
-	}
+	// }
 
 
 	@Autowired
