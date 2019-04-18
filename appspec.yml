@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source:  /
-    destination: /home/ec2-user/app/nonstop/dunpic/
+    destination: /home/ec2-user/app/nonstop/dunpic/build
 hooks:
   AfterInstall:
     - location: execute-deploy.sh
