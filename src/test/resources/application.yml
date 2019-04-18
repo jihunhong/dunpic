@@ -1,0 +1,33 @@
+spring:
+  profiles: 
+    active: ec2
+    
+---
+
+spring:
+  profiles: local
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+  h2:
+    console:
+      enabled: true
+
+---
+
+spring.profiles: ec2
+spring.profiles.include: db
+
+server:
+  port: 8081
+
+---
+
+spring.profiles: original
+spring.profiles.include: db
+
+server:
+  port: 8082
+
+
