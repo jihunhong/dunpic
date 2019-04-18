@@ -16,6 +16,14 @@ spring:
 
 ---
 
+spring.profiles: working
+spring.profiles.include: db
+
+server:
+  port: 8080
+
+---
+
 spring.profiles: ec2
 spring.profiles.include: db
 
