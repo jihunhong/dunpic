@@ -18,6 +18,8 @@ spring:
     console:
       enabled: true
 
+spring.profiles.include: db
+
 ---
 
 spring.profiles: ec2
