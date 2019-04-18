@@ -1,6 +1,10 @@
 spring:
   profiles: 
-    active: ec2
+    active: local
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 apikey: "whdRL7UsbCRRZnkJ8QCflkgArX4qbjSz"
 ---
 
