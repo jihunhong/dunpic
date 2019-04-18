@@ -25,6 +25,7 @@ deploy:
     region: ap-northeast-2
     skip_cleanup: true
     acl: public_read
+    local_dir: deploy
     wait-until-deployed: true
     on:
       repo: jihunhong/dunpic
