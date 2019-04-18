@@ -1,6 +1,5 @@
-네오플 오픈 API를 이용한 프로젝트 DUNPIC.NET
+#네오플 오픈 API를 이용한 프로젝트 [![Build Status](https://travis-ci.org/jihunhong/dunpic.svg?branch=master)](https://travis-ci.org/jihunhong/dunpic)
 
-[![Blog](https://img.shields.io/badge/blog-jihunhong.github.io-brightgreen.svg)](https://jihunhong.github.io/)
 
 ## 🔗 Links
 
