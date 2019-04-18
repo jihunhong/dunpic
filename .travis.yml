@@ -17,12 +17,6 @@ before_deploy:
   - mkdir -p deploy
   - mv dunpic.zip deploy/dunpic.zip
 
-# CI 실행 완료시 메일로 알람
-notifications:
-  email:
-    recipients:
-      - redgee49@gmail.com 
-
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
@@ -35,3 +29,24 @@ deploy:
     on:
       repo: jihunhong/dunpic
       branch: master
+
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
+    secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
+    bucket: dunpic-code-deploy # S3 버킷
+    key: dunpic.zip # 빌드 파일을 압축해서 전달
+    bundle_type: zip
+    application: dunpic # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
+    deployment_group: dunpic-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
+    region: ap-northeast-2
+    wait-until-deployed: true
+    on:
+      repo: jihunhong/dunpic
+      branch: master
+
+# CI 실행 완료시 메일로 알람
+notifications:
+  email:
+    recipients:
+      - redgee49@gmail.com 
+
