@@ -54,6 +54,11 @@
   font-size: large;
 }
 
+.reset_button{
+  left: 90%;
+  position: sticky;
+}
+
 .result_table{
   background: #fff;
   border: 1px solid rgba(0,0,0,.1);

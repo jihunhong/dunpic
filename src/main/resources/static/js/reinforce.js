@@ -70,6 +70,7 @@
         });
       }
 
+
       function write_record(result){
 
         var judge = result;
@@ -109,22 +110,30 @@
       $('.card_list').hide();
       $('.result_table').hide();
 
+      function reset(){
+
+        count = 0;
+
+        document.getElementsByClassName('result_table')[0].innerHTML = "";
+
+        document.getElementById('reinforce_status').setAttribute("value", Number(0));
+        document.getElementById('gold_amount').setAttribute("value", Number(0));
+        document.getElementById('cube_amount').setAttribute("value", Number(0));
+        document.getElementById('cube_gold').setAttribute("value", Number(0));
+        refresh_status();
+      }
+
       $(function(){
         $('.custom-select').change(function(){
           var url_init = 'https://img-api.neople.co.kr/df/items/';
-
-          count = 0;
-
 
           $('.card_list').show();
 
           document.getElementById('weapon_img').src =  url_init + this.value;
           document.getElementById('cardname').innerHTML = $('.custom-select option:selected').text() ; 
-          document.getElementsByClassName('result_table')[0].innerHTML = "";
-          document.getElementById('reinforce_status').setAttribute("value", Number(0));
-          document.getElementById('gold_amount').setAttribute("value", Number(0));
-          document.getElementById('cube_amount').setAttribute("value", Number(0));
-          document.getElementById('cube_gold').setAttribute("value", Number(0));
-          refresh_status();
+
+          reset();
         })
       });
+
+
