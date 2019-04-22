@@ -25,6 +25,8 @@
          document.getElementById('gold_amount').setAttribute("value", gold_status + per_cost[reinforce_status]);
          document.getElementById('cube_amount').setAttribute("value", cube_status + cube_cost[reinforce_status]);
 
+         console.log(document.getElementById('gold_sum'));
+
          if(random_number <= probability[reinforce_status]){
           //강화 성공 (10이하)  
            result = true;
@@ -100,7 +102,9 @@
 
         var gold_cube   = Number(document.getElementById('cube_gold').getAttribute("value"));
 
+        document.getElementById('gold_sum').setAttribute("value", (gold_amount+gold_cube));
         document.getElementById('gold_sum').innerHTML = "💸 총 합계 골드 " + (gold_amount+gold_cube).toLocaleString() + " 골드";
+        
         
         var table = $('.result_table');
 
@@ -121,6 +125,24 @@
         document.getElementById('cube_amount').setAttribute("value", Number(0));
         document.getElementById('cube_gold').setAttribute("value", Number(0));
         refresh_status();
+      }
+
+      function save_record(){
+
+        var try_count = document.getElementById('reinforce_status').getAttribute("value");;
+        
+        var gold = document.getElementById('gold_sum').getAttribute("value");
+
+        $.ajax({
+          url: "/tip/reinforce/save_record?try_count=" + encodeURIComponent(try_count) + "&gold=" + encodeURIComponent(gold) + "&name=" + "test name" ,
+          // test name
+          async: false,
+          dataType : "json",
+          success:function(result){
+            // console.log(result);
+          }
+      });
+
       }
 
       $(function(){
