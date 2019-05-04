@@ -51,9 +51,9 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public String Home(Model model){
-		List<Contents> contents = contentsDAO.findTop3ByOrderByIdDesc();
+		// List<Contents> contents = contentsDAO.findTop3ByOrderByIdDesc();
 		
-		model.addAttribute("contents", contents);
+		// model.addAttribute("contents", contents);
 		
 		return "index";
 	}
