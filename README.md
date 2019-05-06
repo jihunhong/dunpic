@@ -1,5 +1,7 @@
 # 📜 네오플 오픈 API를 이용한 프로젝트 [![Build Status](https://travis-ci.org/jihunhong/dunpic.svg?branch=master)](https://travis-ci.org/jihunhong/dunpic)
 
+# 현재는 서버비용 관련 문제로 서비스를 중지했다.
+
 ## ❓ What is it?
 
 힘 +100 짜리 무기가 있다고 치자,  이 무기의 능력치를 더해주는 시스템을 마법부여라고 한다.
