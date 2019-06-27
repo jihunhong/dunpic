@@ -1,0 +1,71 @@
+.weapon_status{
+    
+}
+
+.card_effect{
+  font-weight:bold;
+}
+
+.cardname{
+  color : #e2a106;
+	font-weight : 560;
+}
+
+.card_header{
+    animation: fill 4s linear 1;
+    height: 100%;
+}
+
+@keyframes fill {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+.true{
+  background-color: aquamarine;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.false{
+  background-color: lightcoral;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.item_card p{
+  font-size: large;
+}
+
+.card_effect span{
+  padding: 5px;
+}
+
+.card_effect p{
+  padding: 5px;
+  font-size: larger;
+}
+
+.card_effect #reinforce_status{
+  font-size: large;
+}
+
+.reset_button{
+  
+}
+
+.result_table{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 8px;
+  border-bottom: 3px solid rgba(0,0,0,.1);
+  margin-bottom: 5px;
+
+  overflow-y: auto;
+  padding: 15px;
+  max-height: 482px;
+}

@@ -1,0 +1,137 @@
+.info_wrapper{
+	height: 420px;
+    background-image: url('http://bbscdn.df.nexon.com/data6/commu/201712/105037_5a42fc6d4d988.jpg');
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position-y: -450px;
+    background-repeat: no-repeat;
+    border-bottom: 5px solid #e2a106;
+}
+
+.item_img{
+	margin-right: 5px;
+    float: left;
+    margin: 0 5px 0 0;
+    width: 34px;
+}
+
+.avatar_option{
+	font-size:11px;
+	color:black;
+	margin: 0 0 5px;
+}
+
+.info_default{
+	border-radius: 4px;
+    border: 1px solid #dadada;
+    margin-right:45px;
+    height: 360px;
+}
+
+.info_default .user_name{
+  text-align: center; 
+  color: #169dc7;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+
+.info_default .grown_name{
+	text-align: center;
+	color: #5b9bd1;
+	font-size: 12px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.info_default .guild_info{
+    font-weight: 550;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    background-color: #cccccc59;
+    margin-bottom: 15px;
+}
+
+.info_default .guild_info p{
+    margin-bottom: 5px;
+}
+
+
+.tab_box{
+	border-radius: 4px;
+    border: 1px solid #dadada;
+    background:white; 
+    padding-left:0px;
+    
+}
+
+.tab_box th, .tab_box td{
+    font-weight: bold;
+}
+
+.circle{
+	border: 4px solid #dadada;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    background-position: 47% 45%;
+    background-color: transparent;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+th
+{
+    background: #eaf0fd9c;
+}
+
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #e8e8e8fa;
+}
+
+.armor_blank{
+    color: #69b538;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    background: #c5c5c559;
+    border-radius: 4px;
+}
+
+.timeline_link{
+    color: #fffbfb;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    border-radius: 4px;
+    background: #ffab2e;
+    text-align: center;
+}
+
+.etc_blank{
+	color: #69b538;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    border-radius: 4px;
+    background: #6f6d6d4f;
+}
+
+#slide_armor {
+	    margin-right: 23px;
+}
+#slide_ac{
+	    margin-right: 23px;
+}
+
+#myTab a {
+    font-weight: bold;
+}
