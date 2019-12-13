@@ -6,6 +6,9 @@ apikey: "whdRL7UsbCRRZnkJ8QCflkgArX4qbjSz"
 
 spring:
   profiles: local
+  devtools:
+    livereload:
+      enabled: true
   jpa:
     hibernate:
       ddl-auto: none
@@ -13,3 +16,8 @@ spring:
   h2:
     console:
       enabled: true
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}

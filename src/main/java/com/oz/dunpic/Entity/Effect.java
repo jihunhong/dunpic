@@ -11,7 +11,7 @@ import javax.persistence.OneToOne;
 
 @Entity
 @IdClass(CompositeKey.class)
-public class Option {
+public class Effect {
 	
 	@Id
 	int card_id;

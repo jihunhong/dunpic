@@ -20,10 +20,10 @@ public interface CardDAO extends JpaRepository<Card, Integer>{
 	@Query("Select p from Card p where cardname = :cardname")
 	Card findByCardname(@Param("cardname") String cardname);
 	
-	@Query("Select DISTINCT groupname from Option  where card_id in (select id from Card where part like %:part% ) order by groupname ASC")
+	@Query("Select DISTINCT groupname from Effect  where card_id in (select id from Card where part like %:part% ) order by groupname ASC")
 	List<Card> findByPartForGroup(@Param("part") String part);
 	
-	@Query("Select DISTINCT effect from Option  where card_id in (select id from Card where part like %:part% ) and groupname = :groupname order by effect DESC")
+	@Query("Select DISTINCT effect from Effect  where card_id in (select id from Card where part like %:part% ) and groupname = :groupname order by effect DESC")
 	List<Card> findByGroupForEffect(@Param("part") String part, @Param("groupname") String groupname);
 	
 	/*  SELECT distinct effect
