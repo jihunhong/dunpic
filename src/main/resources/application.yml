@@ -13,29 +13,3 @@ spring:
   h2:
     console:
       enabled: true
-
----
-
-spring.profiles: working
-spring.profiles.include: db
-
-server:
-  port: 8080
-
----
-
-spring.profiles: ec2
-spring.profiles.include: db
-
-server:
-  port: 8081
-
----
-
-spring.profiles: original
-spring.profiles.include: db
-
-server:
-  port: 8082
-
-
