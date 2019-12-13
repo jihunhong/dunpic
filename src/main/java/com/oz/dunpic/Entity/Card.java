@@ -29,17 +29,17 @@ public class Card {
 	String itemId;
 
 	@OneToMany(mappedBy = "card")  // Member 객체와 양방향 관계를 만들기위해 추가한다. (대상테이블)
-	private List<Option> card = new ArrayList<Option>();
+	private List<Effect> card = new ArrayList<Effect>();
 
 	
 	
-	public List<Option> getCard() {
+	public List<Effect> getCard() {
 		return card;
 	}
 
 
 
-	public void setCards(List<Option> card) {
+	public void setCards(List<Effect> card) {
 		this.card = card;
 	}
 

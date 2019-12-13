@@ -39,7 +39,7 @@ import com.oz.dunpic.DAO.CardDAO;
 import com.oz.dunpic.DAO.ResultDAO;
 import com.oz.dunpic.DAO.TryRecordDAO;
 import com.oz.dunpic.Entity.Card;
-import com.oz.dunpic.Entity.Option;
+import com.oz.dunpic.Entity.Effect;
 import com.oz.dunpic.Entity.Result;
 import com.oz.dunpic.Entity.TryRecord;
 
