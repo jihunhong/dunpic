@@ -29,7 +29,7 @@ public class Result {
 	
 	String max;
 	
-	int upgrade;
+	Integer upgrade;
 	
 	String value;
 
@@ -150,14 +150,14 @@ public class Result {
 	/**
 	 * @return the upgrade
 	 */
-	public int getUpgrade() {
+	public Integer getUpgrade() {
 		return upgrade;
 	}
 
 	/**
 	 * @param upgrade the upgrade to set
 	 */
-	public void setUpgrade(int upgrade) {
+	public void setUpgrade(Integer upgrade) {
 		this.upgrade = upgrade;
 	}
 
