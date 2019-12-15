@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -185,6 +186,51 @@ public class TipController {
 		List<TryRecord> list = tryrecordDAO.findAll();
 
 		return list;
+	}
+
+	@RequestMapping(value = "/reinforce/item_search", method = RequestMethod.GET)
+	public @ResponseBody Object item_id()
+			throws ClientProtocolException, IOException, ParseException {
+
+		List<Card> cards = cardDAO.findAll();
+
+		for(int i=0; i<cards.size(); i++){
+			String temp = cards.get(i).getCardname();
+
+			String encoded = URLEncoder.encode(temp);
+
+			HttpClient httpClient = HttpClientBuilder.create().build();
+
+			String url = "https://api.neople.co.kr/df/items?itemName=" + encoded +  
+						 "&wordType=front&apikey="
+						 + apikey;
+
+			HttpGet httpGet = new HttpGet(url);
+
+			HttpResponse response = httpClient.execute(httpGet);
+
+			String json = EntityUtils.toString(response.getEntity());
+
+			JSONParser jsonParser = new JSONParser();
+			JSONObject jsonObject = (JSONObject) jsonParser.parse(json);
+			JSONArray rowArray = (JSONArray) jsonObject.get("rows");
+
+			try{
+				JSONObject obj = (JSONObject) rowArray.get(0);
+				String v = (String) obj.get("itemId");
+				
+				cards.get(i).setItemId(v);
+				System.out.println(temp + "=>" + v);
+				
+			}catch(Exception e){
+				System.out.println(e);
+			}
+			
+			cardDAO.saveAll(cards);
+		}
+		
+
+		return cards;
 	}
 
 }
